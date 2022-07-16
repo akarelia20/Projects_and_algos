@@ -36,6 +36,17 @@ class LinkedList{
         }
         return this.head.data
     }
+
+    display(){
+        let current = this.head
+        let result = ""
+        // console.log (current.data)
+        while(current != null){
+            result += `${current.data},`
+            current= current.next
+        }
+        return result
+    }
 }
 
 
@@ -48,4 +59,6 @@ SLL.addNodeFront(5)
 SLL.addNodeFront(7)
 
 SLL.removeFront()
+
+console.log(SLL.display())
 console.log(SLL)
